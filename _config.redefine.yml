@@ -196,7 +196,7 @@ navbar:
       path: /projects 
       icon: fa-regular fa-project-diagram # can be empty
     Gallery: 
-      path: /gallery 
+      path: /masonry 
       icon: fa-regular fa-images # can be empty
     # Status: 
     #   path: https://status.ohevan.com/
