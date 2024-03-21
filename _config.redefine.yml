@@ -159,8 +159,8 @@ home_banner:
     links:
       github: https://github.com/stepbystepcode # your GitHub URL
       instagram: # your Instagram URL
-      zhihu: https://www.zhihu.com/people/peter-19-23 # your ZhiHu URL
-      twitter:  # your twitter URL
+      zhihu: # https://www.zhihu.com/people/peter-19-23 # your ZhiHu URL
+      twitter: https://twitter.com/Peter35761296 # your twitter URL
       email: 3202146864@qq.com # your email
       # ...... # you can add more
     # Social links with QRcode drawers
@@ -192,6 +192,12 @@ navbar:
     Archives: 
       path: /archives 
       icon: fa-regular fa-archive # can be empty
+    Projects: 
+      path: /projects 
+      icon: fa-regular fa-project-diagram # can be empty
+    Gallery: 
+      path: /gallery 
+      icon: fa-regular fa-images # can be empty
     # Status: 
     #   path: https://status.ohevan.com/
     #   icon: fa-regular fa-chart-bar
@@ -229,12 +235,15 @@ home:
     announcement: # Announcement text
     show_on_mobile: true # Whether to show sidebar navigation on mobile sheet menu
     links:
-      Archives: 
-        path: /archives 
-        icon: fa-regular fa-archive # can be empty
       Tags: 
         path: /tags 
         icon: fa-regular fa-tags # can be empty
+      Projects: 
+        path: /projects 
+        icon: fa-regular fa-project-diagram # can be empty
+      Archives: 
+        path: /archives 
+        icon: fa-regular fa-archive # can be empty
       Categories: 
         path: /categories 
         icon: fa-regular fa-layer-group # can be empty
