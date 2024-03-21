@@ -1,4 +1,5 @@
 ---
-title: masonry
+title: Gallery
+type: masonry
 date: 2024-03-21 16:06:01
 ---
