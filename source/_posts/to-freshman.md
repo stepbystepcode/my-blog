@@ -93,9 +93,18 @@ Python作为2024年编程语言排行榜之首，是当之无愧的编程语言�
 ### 学习C语言
 
 很多大学生第一件事就是开始学习C语言，这是一个非常正确的选择。C语言是所有编程语言的祖师爷，学好了C语言，其他编程语言就是小菜一碟。
-学习方法：
-1. 《C Primer Plus（第六版）》
-2. 《》
+学习 C 语言的时候不要进入死角，去纠结  i++++、++i，掌握基本的循环、判断、函数后就可以多写一些课后练习题，然后重点学习内存、指针。
+这里推荐经典书籍和翁凯老师的 C 语言课程。
+发布在在大学 MOOC ，翁恺老师的讲述特别简单易懂，适合初学者。
+1. 《C Primer Plus（第六版）》- Stephen Prata
+2. 《C 程序设计语言》- Brian W. Kernighan & Dennis M. Ritchie
+3. [C 语言程序入门](https://www.icourse163.org/course/0809ZJU007-90010)
+4. [C 语言程序进阶](https://www.icourse163.org/course/0809ZJU007B-200001)
+
+边学边练，很重要！推荐刷完洛谷的入门题单，然后再刷一些基础题，比如说指针、数组、字符串等等。
+[洛谷入门题单](https://www.luogu.com.cn/training/list)
+![洛谷入门提单](./to-freshman/luogu.png)
+不懂就搜bing，搜不到就问，记得提问前先看上面的提问方法，否则大佬们可能会直接忽略你的问题。
 
 #### RTFM 与 STFW
 RTFM 是 Read The Fucking Manual 的意思，STFW 是 Search The Fucking Web 的意思。这两个字面意思看完其实就理解了，但会被缩成短语即说明其使用的频率之高。也说明了现代人类大部分人经常会问 Stupid 的问题，而不是先尝试过一些想法后再提问。
