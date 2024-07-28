@@ -22,6 +22,7 @@ CS50是哈佛大学的一门计算机科学入门课程，涵盖了计算机科�
 课程涵盖了计算机科学的基础知识和编程技能，从“小学生”编程软件Scratch到C语言，再到Python、JavaScript等高级语言，涵盖了计算机科学的基础知识和各种编程思想。老师Malan风趣幽默，看完第一节课就会被他的授课风格所吸引。同时，Harvard的学术氛围也会让你感受到一种愉悦快乐的学习的氛围。
 
 课程目录：Scratch、C、Arrays、Algorithms、Memory、Data Structures、Python、Artificial Intelligence、SQL、HTML、CSS、JavaScript、Flask、Cybersecurity
+![course](1.png) ![course](<3 10.54.21 AM.png>) ![course](<2 10.54.21 AM.png>)
 
 ## 2. 书籍
 
