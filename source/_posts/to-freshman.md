@@ -101,7 +101,7 @@ Python作为2024年编程语言排行榜之首，是当之无愧的编程语言�
 
 边学边练，很重要！推荐刷完洛谷的入门题单，然后再刷一些基础题，比如说指针、数组、字符串等等。
 [洛谷入门题单](https://www.luogu.com.cn/training/list)
-![洛谷入门提单](./to-freshman/luogu.png)
+![洛谷入门提单](luogu.png)
 不懂就搜bing，搜不到就问，记得提问前先看上面的提问方法，否则大佬们可能会直接忽略你的问题。
 
 #### RTFM 与 STFW
@@ -136,6 +136,7 @@ RTFM 与 STFW 的思想不仅仅适用于 unix 和 linux 文化，它适用于�
 英语是计算机领域的通用语言，掌握英语能力可以让你更好地阅读和理解国外的技术文档、论文和资料。早日通过英语四六级考试，或者通过托福、雅思等考试，提升自己的英语水平，是非常重要的。
 
 提升打字速度可以让你更快地输入代码和文档，提高工作效率。打字就像是程序员的走路技能，如果你的打字速度很慢，那么你的工作效率就会大大降低，事倍功半。在这里，推荐一个打字练习网站：[Typing Club](https://www.typingclub.com/sportal/program-3.game)，他从入门者的角度教你如何正确使用键盘高效打字，而且每一关都有奖励机制和趣味性，你可以在玩中练习打字，提高自己的打字速度。
+![typingclub](typingclub.png)
 
 ### 早日使用Mac或者Linux
 
@@ -148,7 +149,7 @@ RTFM 与 STFW 的思想不仅仅适用于 unix 和 linux 文化，它适用于�
 还有，MacOS的续航能力和性能表现也是非常出色的。MacBook系列的笔记本电脑,不仅拥有优秀的续航能力,还具备强大的性能表现。这对于长时间的编程和开发工作来说,是非常重要的。如果你选择了Windows，那么你可能需要背着像板砖一样的电源适配器去找插座，上课时如果忘记充电，那么你的电脑可能会在课堂上关机，而且不插电源的情况下，Windows的性能表现也会大打折扣。
 
 我知道,MacBook的价格看起来可能比Windows笔记本要高一些,但是其性价比绝对是物有所值。国内99%的大型互联网公司都在使用MacOS系统,这不仅是因为它能提高工作效率,也是因为它优秀的稳定性和对程序开发的友好性。大家没必要选择最高配的MacBook,只要选择16G内存+512G固态硬盘的配置就足够了。截止2024年7月28日，拼多多14寸的MacBook Pro M1 Pro+16G内存+512G固态硬盘的价格是8000左右。618和双十一的时候，可能还会有更低的价格。
-![MacBookPro](./to-freshman/mac.png)
+![MacBookPro](mac.png)
 
 所以,我真诚地建议各位学弟,能够尽早购买一台MacBook,或者至少在学习和工作中大量使用Linux系统。相信通过自己的不断探索和实践,你们一定能够在这些先进的操作系统上收获意想不到的成果。
 
@@ -156,11 +157,11 @@ RTFM 与 STFW 的思想不仅仅适用于 unix 和 linux 文化，它适用于�
 
 编程软件是程序员的利器，选择一款适合自己的编程软件，可以提高工作效率，减少出错率。在这里，我推荐几款优秀的编程软件：
 
-![Vim](./to-freshman/lazyvim.png)
+![Vim](lazyvim.png)
 - Vim是我最喜欢的编辑器，没有之一。不管我使用什么操作系统，我都会第一时间安装Vim。不管我使用什么编程软件，我都会安装vim插件以启用vim功能。这是因为vim高效的键位只需要下功夫记忆，就可以让你的编程效率提高数倍。在这里，我推荐一个学习vim的视频教程：[Vim入门教程1](https://www.bilibili.com/video/BV164411P7tw) [Vim入门教程2](https://www.bilibili.com/video/av55664166/) [Vim入门教程3](https://www.bilibili.com/video/BV1r4411G7de/?vd_source=e8f45c8a3793e6e84c5876844e745571)。通过这个教程，你可以快速掌握vim的基本操作，提高自己的编程效率。实践没必要完全按照他的操作，你只需要安装一个[LazyVim](https://www.lazyvim.org/)，或者在你的编程软件中安装vim插件，就可以使用vim的快捷键了。
-![VS Code](./to-freshman/vscode.png)
+![VS Code](vscode.png)
 - VSCode：VSCode是一款轻量级的现代化代码编辑器，支持多种编程语言，具有丰富的插件和主题，可以满足你的各种编程需求。VSCode的界面简洁清晰，操作简单方便，是很多程序员的首选编辑器。下载地址：[VSCode](https://code.visualstudio.com/)
-![JetBrains](./to-freshman/jetbrains.png)
+![JetBrains](jetbrains.png)
 - JetBrains：JetBrains是一家专业的软件开发工具提供商，旗下拥有多款优秀的IDE，如IntelliJ IDEA、PyCharm、WebStorm等。这些IDE具有强大的代码智能提示、调试功能和版本控制功能，可以帮助你更快地开发和调试代码。这个软件是收费的，但是我们可以通过山西大学的企业微信邮箱来获得免费使用的资格，这个羊毛越早薅到就是赚到。如果你需要开发大型项目，那么JetBrains的针对性IDE就是最好的选择，如Java就用IDEA，Python就用PyCharm，前端就用WebStorm。下载地址：[JetBrains](https://www.jetbrains.com/)
 
 感谢你能看到这里，希望这些建议对你有所帮助。如果你看到了这篇文章并开始付出行动，那么你就已经走在了成功的路上。
