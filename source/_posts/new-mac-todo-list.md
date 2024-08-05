@@ -1,7 +1,7 @@
 ---
-title: new-mac-todo-list
+title: Mac新机器配置清单
 date: 2024-08-04 21:44:55
-tags:
+tags: [mac]
 ---
 作为一个程序员，我来分享一下我的装机经历。
 
@@ -19,7 +19,7 @@ Mac所有软件之母，重要性不言而喻。
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-使用brew安装htop(进程管理器)、nvm（nodejs版本控制）、ffmpeg（音视频处理工具）、neofetch（系统信息查看工具）、exa（ls替代品）、neovim（代码编辑器）、fzf（搜索工具）、ranger（vim模式的文件资源管理器）、miniforge（python虚拟环境控制，配合mamba使用）
+使用brew安装htop(进程管理器)、git(版本控制软件)、nvm（nodejs版本控制）、ffmpeg（音视频处理工具）、neofetch（系统信息查看工具）、eza（ls替代品）、neovim（代码编辑器）、fzf（搜索工具）、ranger（vim模式的文件资源管理器）、miniforge（python虚拟环境控制，配合mamba使用）
 ```bash
 brew install htop nvm ffmepg neofetch exa neovim fzf ranger
 ```
@@ -89,3 +89,21 @@ Apifox、Postman（接口调试）
 MongoDB Compass（MongoDB数据库管理）
 Parallels Desktop（虚拟机）
 Todesk、向日葵（远程控制）
+
+# 其他设置
+## 关闭鼠标自然滚动
+Settings -> Mouse -> Scroll direction: Natural
+```bash
+# do not open previous previewed files (e.g. PDFs) when opening a new one
+defaults write com.apple.Preview ApplePersistenceIgnoreState YES
+
+# show Library folder
+chflags nohidden ~/Library
+
+# show hidden files
+defaults write com.apple.finder AppleShowAllFiles YES
+
+# show path bar
+defaults write com.apple.finder ShowPathbar -bool true
+killall Finder;
+```
