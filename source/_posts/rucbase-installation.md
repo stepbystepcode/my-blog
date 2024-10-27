@@ -5,7 +5,7 @@ tags: Database
 ---
 
 # RucBase 数据库实验环境安装
-
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113375174459879&bvid=BV1Jz14YcETQ&cid=26479496308&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 ## 环境说明
 ![env](env.png)
 ## 安装QEMU
