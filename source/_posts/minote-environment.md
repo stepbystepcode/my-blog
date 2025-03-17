@@ -5,6 +5,7 @@ tags: Android
 ---
 
 # Android Studio 下载安装
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113375174459879&bvid=BVBV1YLXMYJEiJ&cid=26479496308&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 [Android Studio官网下载](https://developer.android.com/studio)
 配置网络环境
 
