@@ -256,5 +256,9 @@ packaging {
     }
 ```
 # 创建虚拟机
+![avd](avd1.png)
+![avd](avd2.png)
+![avd](avd3.png)
 
 # 运行成功
+![result](result.png)
