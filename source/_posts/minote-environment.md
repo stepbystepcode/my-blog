@@ -18,6 +18,7 @@ git clone https://github.com/MiCode/Notes
 
 # 创建Android项目
 按图完成项目创建，并等待右下角项目创建进度完成。
+![create](create.png)
 
 ```bash
 cp -r ./Notes/src/net/micode/notes/* ./MiNote/app/src/main/java/net/micode/notes/
@@ -25,6 +26,7 @@ cp -r ./Notes/res/* ./MiNote/app/src/main/res/
 ```
 
 # 修改Manifest.xml
+![manifest](manifest.png)
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -189,9 +191,14 @@ cp -r ./Notes/res/* ./MiNote/app/src/main/res/
 cd ~/Documents/project/MiNote
 wget https://dlcdn.apache.org//httpcomponents/httpclient/binary/httpcomponents-client-4.5.14-bin.zip
 unzip httpcomponents-client-4.5.14-bin.zip -d app/libs
+cd app/libs
+rm -rf javadoc/ LICENSE.txt NOTICE.txt RELEASE_NOTES.txt
+cp ./lib/* .
+rm -rf lib
 ```
 
 # 添加依赖
+![gradle](gradle.png)
 ```gradle
     implementation(fileTree(mapOf(
         "dir" to "libs",
@@ -200,6 +207,7 @@ unzip httpcomponents-client-4.5.14-bin.zip -d app/libs
     )))
 ```
 # 修改过时函数showNotification
+![fun-replace](fun-replace.png)
 ```java
 private void showNotification(int tickerId, String content) {
         PendingIntent pendingIntent;
@@ -222,7 +230,8 @@ private void showNotification(int tickerId, String content) {
     }
 ```
 
-# 转换switch为if-else
+# 转换switch为if-else (共4处)
+![switch-replace](switch-replace.png)
 
 # 修改重复引入依赖
 ```gradle
