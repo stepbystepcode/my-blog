@@ -9,41 +9,71 @@ tags:
 ```bash
 # network
 curl -I https://www.google.com
+# zimfw
+curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
 # homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/stepbystep/.zprofile\n    eval "$(/opt/homebrew/bin/brew shellenv)"
+# 字体
 brew install --cask font-jetbrains-mono-nerd-font
-brew install htop ffmpeg fastfetch neovim fzf ranger miniforge lazygit lux duf cmake jenv lsd
-# oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# ai coding
+brew tap farion1231/ccswitch
+brew install --cask cc-switch
+# 自动切换输入法
+brew install --cask keyboardholder
+# alt tab
+brew install --cask alt-tab
+# 终端
+brew install --cask ghostty
+# 命令行工具集合
+brew install htop fastfetch neovim lazygit lux git duf cmake eza curl wget
+brew install yazi ffmpeg sevenzip jq poppler fd ripgrep fzf zoxide resvg imagemagick font-symbols-only-nerd-font
+# 截图
+brew install --cask pixpin
+# 自建服务器远程控制
+brew install --cask rustdesk
+# 播放器
+brew install --cask iina
+# 虚拟机、容器（除了Windows）
+brew install --cask orbstack
+# 虚拟机（桌面包括Windows）
+brew install --cask virtualbox
+# 局域网传文件
+brew install --cask localsend
+# 全能的神器
+brew install --cask raycast
+# jetbrains
+brew install jetbrains-toolbox
+# IDE
+open https://antigravity.google/
+open https://qoder.com/download
+# browser
+open https://www.diabrowser.com/
+
+
 # bun
 curl -fsSL https://bun.sh/install | bash
+# uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
 # dracula-theme
-git clone https://github.com/dracula/iterm.git
+mkdir -p ~/.config/ghostty/themes/ && curl -o ~/.config/ghostty/themes/dracula https://raw.githubusercontent.com/dracula/ghostty/refs/heads/main/dracula && echo "theme = dracula" >> ~/Library/Application\ Support/com.mitchellh.ghostty/config
 # Finder settings
 chflags nohidden ~/Library
 defaults write com.apple.finder AppleShowAllFiles YES
 defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool false
 killall Finder;
-# nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
-nvm install --lts
+# nodejs
+curl -o- https://fnm.vercel.app/install | bash
+fnm install 24
+corepack enable pnpm
 # lazyvim
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 nvim
-# mamba
-bash Miniforge3-MacOSX-arm64.sh
 # xcode
 sudo xcodebuild -license
 # java
-echo 'eval "$(jenv init -)"' >> /Users/stepbystep/.zshrc
-jenv doctor
-jenv add /Users/stepbystep/Library/Java/JavaVirtualMachines/corretto-21.0.4/Content/Home
-jenv add /Users/stepbystep/Library/Java/JavaVirtualMachines/corretto-17.0.12/Contents/Home
-jenv add /Users/stepbystep/Library/Java/JavaVirtualMachines/corretto-1.8.0_422/Contents/Home
-jenv global 17
-java --version
+curl -s "https://get.sdkman.io" | bash
+sdk install java 21.0.9-amzn
 ```
 ![final](final.jpeg)
