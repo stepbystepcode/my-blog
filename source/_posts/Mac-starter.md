@@ -26,7 +26,7 @@ brew install --cask alt-tab
 brew install --cask ghostty
 # 命令行工具集合
 brew install htop fastfetch neovim lazygit lux git duf cmake eza curl wget
-brew install yazi ffmpeg sevenzip jq poppler fd ripgrep fzf zoxide resvg imagemagick font-symbols-only-nerd-font
+brew install yazi ffmpeg sevenzip jq poppler fd ripgrep fzf zoxide resvg imagemagick font-symbols-only-nerd-font yt-dlp
 # 截图
 brew install --cask pixpin
 # 自建服务器远程控制
@@ -43,13 +43,20 @@ brew install --cask localsend
 brew install --cask raycast
 # jetbrains
 brew install jetbrains-toolbox
+# 笔记软件
+brew install --cask obsidian
+# 录屏软件(轻度使用pixpin即可)
+brew install --cask obs
+# postman
+brew install --cask postman
 # IDE
 open https://antigravity.google/
 open https://qoder.com/download
 # browser
+brew install --cask google-chrome@beta
 open https://www.diabrowser.com/
-
-
+# office (只下载三件套即可)
+open https://apps.apple.com/us/app-bundle/microsoft-365/id1450038993
 # bun
 curl -fsSL https://bun.sh/install | bash
 # uv
