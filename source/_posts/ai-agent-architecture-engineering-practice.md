@@ -827,13 +827,14 @@ async function runWithFallback(task) {
 
 10.   OpenClaw 把前面这些原则放进了一个可运行系统里，真正让 Agent 跑稳，靠的不是更复杂的循环，而是消息解耦、状态外化、分层提示、记忆整合和安全边界这些工程细节。
 
-1.   OpenAI,
-2.   Cloudflare,
-3.   Simon Willison,
-4.   Anthropic,
-5.   Anthropic,
-6.   LangChain,
-7.   Anthropic,
-8.   OpenAI,
-9.   Anthropic,
+1. OpenAI, [Harness engineering: leveraging Codex in an agent-first world](https://openai.com/index/harness-engineering/)
+2. Cloudflare, [How we rebuilt Next.js with AI in one week](https://blog.cloudflare.com/vinext/)
+3. Simon Willison, [I ported JustHTML from Python to JavaScript with Codex CLI](https://simonwillison.net/2025/Dec/15/porting-justhtml/)
+4. Anthropic, [Introducing Agent Skills](https://claude.com/blog/skills)
+5. Anthropic, [Managing context on the Claude Developer Platform](https://claude.com/blog/context-management)
+6. LangChain, [State of Agent Engineering](https://www.langchain.com/state-of-agent-engineering)
+7. Anthropic, [Measuring AI agent autonomy in practice](https://www.anthropic.com/research/measuring-agent-autonomy)
+8. OpenAI, [Designing AI agents to resist prompt injection](https://openai.com/index/designing-agents-to-resist-prompt-injection/)
+9. Anthropic, [Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents)
+
 > 原作者：Tw93
