@@ -1,4 +1,4 @@
-@import '../common/variables'
+@require '../common/variables'
 
 .home-content-container
   if (hexo-config('home.sidebar.enable') && hexo-config('home.sidebar.position') == 'right')
@@ -54,19 +54,19 @@
 
       .home-article-title
         position relative
-        font-weight 700
+        font-weight 600
         font-size 1.4rem
         line-height 1.5
         color var(--second-text-color)
         font-family $english-font-family, $chinese-font-family, 'Noto Sans SC', sans-serif
+
+        margin 0
 
         +redefine-tablet()
           font-size 1.3rem
 
         +redefine-mobile()
           font-size 1.2rem
-
-        margin 0
 
       .home-article-content
         word-wrap break-word

@@ -12,6 +12,8 @@
 info:
   # Site title
   title: Jing Li's Blog
+  # Site subtitle
+  subtitle:
   # Author name
   author: Jing Li
   # Site URL
@@ -54,8 +56,13 @@ global:
       family:  # Font family
       url:  # Font URL to CSS file
     # English fonts
-    english: 
+    english:
       enable: false # Whether to enable custom english fonts
+      family:  # Font family
+      url:  # Font URL to CSS file
+    # Custom title fonts (navbar, sidebar)
+    title:
+      enable: false # Whether to enable custom title fonts
       family:  # Font family
       url:  # Font URL to CSS file
   # Content max width
@@ -80,9 +87,20 @@ global:
   # Whether to enable single page experience (using swup). See https://swup.js.org/. similar to pjax
   single_page: true
   # Whether to enable Preloader.
-  preloader: true
+  preloader:
+    enable: true
+    custom_message: # Custom message. If empty, the site title will be displayed
+  # Side tools settings
+  side_tools:
+    # Whether to enable gear rotation animation for settings button
+    gear_rotation: true
+    # Whether to auto expand tools list on page load
+    auto_expand: false
   # Whether to enable open graph
-  open_graph: true
+  open_graph:
+    enable: true
+    image: /images/redefine-og.webp  # default og:image
+    description: Hexo Theme Redefine, Redefine Your Hexo Journey.
   # Google Analytics
   google_analytics:
     enable: false # Whether to enable Google Analytics
@@ -123,6 +141,7 @@ home_banner:
     hitokoto:  # 一言配置
       enable: false # Whether to enable hitokoto
       api: https://v1.hitokoto.cn # API URL, can add types, see https://developer.hitokoto.cn/sentence/#%E5%8F%A5%E5%AD%90%E7%B1%BB%E5%9E%8B-%E5%8F%82%E6%95%B0
+      show_author: false # Whether to show author
     typing_speed: 100 # Typing speed (ms)
     backing_speed: 80 # Backing speed (ms)
     starting_delay: 500 # Start delay (ms)
@@ -157,15 +176,15 @@ home_banner:
     style: default # default, reverse, center
     # Social links
     links:
-      github: https://github.com/stepbystepcode # your GitHub URL
-      instagram: # your Instagram URL
-      zhihu: # https://www.zhihu.com/people/peter-19-23 # your ZhiHu URL
-      twitter: https://twitter.com/Peter35761296 # your twitter URL
-      email: 3202146864@qq.com # your email
+      - icon: github # can also be "fa-brands fa-github"
+        url: https://github.com/stepbystepcode
+      - icon: email
+        url: stepbystepcode@hotmail.com
       # ...... # you can add more
     # Social links with QRcode drawers
     qrs:
-      weixin: https://img.gejiba.com/images/52dd5e880d8f941577f3f09a594dab1d.webp # your Wechat QRcode image URL
+      - icon: weixin
+        qr: https://img.gejiba.com/images/52dd5e880d8f941577f3f09a594dab1d.webp
       # ...... # you can add more
 # HOME BANNER <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
@@ -250,6 +269,8 @@ home:
       # ...... # you can add more
   # Article date format
   article_date_format: auto # auto, relative, YYYY-MM-DD, YYYY-MM-DD HH:mm:ss etc.
+  # Article excerpt length
+  excerpt_length: 200 # Max length of article excerpt
   # Article categories visibility
   categories:
     enable: true  # Whether to enable
@@ -271,15 +292,16 @@ articles:
     image_border_radius: 14px # image border radius
     image_alignment: center # image alignment. left, center
     image_caption: false # Whether to display image caption
+    delete_mask: false # Add mask effect to <del> tags, hiding content by default and revealing on hover
     link_icon: true # Whether to display link icon
     title_alignment: left # Title alignment. left, center
     headings_top_spacing: # Top spacing for headings from h1-h6
-      h1: 5rem
-      h2: 4rem
-      h3: 2.8rem
-      h4: 2.5rem
-      h5: 2.2rem
-      h6: 2rem
+      h1: 3.2rem
+      h2: 2.4rem
+      h3: 1.9rem
+      h4: 1.6rem
+      h5: 1.4rem
+      h6: 1.3rem
   # Word count. Requires hexo-wordcount (npm install hexo-wordcount). See https://github.com/willin/hexo-wordcount
   word_count:
     enable: true # Whether to enable
@@ -298,6 +320,9 @@ articles:
       enable: false # Whether to enable
       family: # Font family
       url: # Font URL to CSS file
+    highlight_theme: # Color scheme for highlightjs code highlighting. For preview, see https://highlightjs.org/examples
+      light: github # light mode theme, support: github, atom-one-light, default
+      dark: vs2015 # dark mode theme, support: github-dark, monokai-sublime, vs2015, night-owl, atom-one-dark, nord, tokyo-night-dark, a11y-dark, agate
   # Table of contents settings
   toc:
     enable: true # Whether to enable TOC
@@ -311,6 +336,8 @@ articles:
     default: cc_by_nc_sa # Default license, can be cc_by_nc_sa, cc_by_nd, cc_by_nc, cc_by_sa, cc_by, all_rights_reserved, public_domain
   # Whether to enable lazyload for images
   lazyload: true
+  # Pangu.js (automatically add space between Chinese and English). See https://github.com/vinta/pangu.js
+  pangu_js: false
   # Article recommendation. Requires nodejieba (npm install nodejieba). Transplanted from hexo-theme-volantis.
   recommendation:
     # Whether to enable article recommendation
@@ -397,11 +424,11 @@ footer:
 # Docs: https://redefine-docs.ohevan.com/inject
 inject:
   # Whether to enable inject
-  enable: false
+  enable: true
   # Inject custom head html code
-  head: 
-    -
-    -
+  head:
+    - <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+    - <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
   # Inject custom footer html code
   footer:
     -
@@ -434,7 +461,10 @@ plugins:
   # Mermaid JS. Requires hexo-filter-mermaid-diagrams (npm i hexo-filter-mermaid-diagrams). See https://mermaid.js.org/
   mermaid:
     enable: false # enable mermaid or not
-    version: "9.3.0" # default v9.3.0
+    version: "11.4.1" # default v11.4.1
+    theme:
+      light: "default"
+      dark: "dark"
 # PLUGINS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
@@ -445,6 +475,10 @@ page_templates:
   friends_column: 2
   # Tags page style
   tags_style: blur # blur, cloud
+  # Masonry page batch size
+  masonry:
+    batch_size: 12
+    initial_batch_size: 24
 # PAGE TEMPLATES <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
@@ -454,11 +488,11 @@ cdn:
   # Whether to enable CDN
   enable: false
   # CDN Provider
-  provider: staticfile # staticfile, bootcdn, cdnjs, jsdelivr, unpkg, custom
+  provider: npmmirror # npmmirror, zstatic, cdnjs, jsdelivr, unpkg, custom
   # Custom CDN URL
   # format example: https://cdn.custom.com/hexo-theme-redefine/${version}/source/${path}
-  # The ${path} must be in the source folder of the theme
-  custom_url: 
+  # The ${path} must leads to the root of the "source" folder of the theme
+  custom_url:
 # CDN <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 # DEVELOPER MODE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start

@@ -1,39 +1,94 @@
-/**
- * folding.js
- * transplant from hexo-theme-volantis
- * Modify by Evan
- */
-
-
 'use strict';
 
-function postFolding(args, content) {
-  if (/::/g.test(args)) {
-    args = args.join(' ').split('::');
+const {
+  parseTagArgs,
+  hasNamedArgs,
+  getNamedString,
+  splitClassNames,
+} = require('../utils/tag-args');
+const { html } = require('../utils/html');
+const { renderMarkdownTagSafe } = require('../utils/markdown-swig');
+
+function normalizeOpenValue(value) {
+  const normalized = String(value ?? '').trim().toLowerCase();
+
+  if (!normalized) {
+    return false;
   }
-  else {
-    args = args.join(' ').split(',');
+
+  if (["1", "true", "yes", "on"].includes(normalized)) {
+    return true;
   }
-  let style = '';
-  let title = '';
-  if (args.length > 1) {
-    style = args[0].trim();
-    title = args[1].trim();
-  } else if (args.length > 0) {
-    title = args[0].trim();
+
+  if (["0", "false", "no", "off"].includes(normalized)) {
+    return false;
   }
-  if (style != undefined) {
-    return `<details class="${style}" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>${title} </summary>
-              <div class='content'>
-              ${hexo.render.renderSync({text: content, engine: 'markdown'}).split('\n').join('').replace("h1","p class='h1'").replace("h2","p class='h2'").replace("h3","p class='h3'").replace("h4","p class='h4'").replace("h5","p class='h5'").replace("h6","p class='h6'")}
-              </div>
-            </details>`;
-  }
-  return `<details data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>${title} </summary>
-              <div class='content'>
-              ${hexo.render.renderSync({text: content, engine: 'markdown'}).split('\n').join('').replace("h1","p class='h1'").replace("h2","p class='h2'").replace("h3","p class='h3'").replace("h4","p class='h4'").replace("h5","p class='h5'").replace("h6","p class='h6'")}
-              </div>
-            </details>`;
+
+  return false;
 }
 
-hexo.extend.tag.register('folding', postFolding, {ends: true});
+function parseNamedArgs(rawArgs) {
+  const parsedArgs = parseTagArgs(rawArgs);
+  const supportsNamed = ['title', 'class', 'classes', 'style', 'open']
+    .some((key) => parsedArgs.named[key] != null);
+
+  if (!hasNamedArgs(parsedArgs) || !supportsNamed) {
+    return null;
+  }
+
+  const classNames = [
+    ...splitClassNames(getNamedString(parsedArgs.named, 'class', '')),
+    ...splitClassNames(getNamedString(parsedArgs.named, 'classes', '')),
+    ...splitClassNames(getNamedString(parsedArgs.named, 'style', '')),
+  ];
+
+  return {
+    title: getNamedString(parsedArgs.named, 'title', '').trim() || parsedArgs.positional.join(' ').trim(),
+    className: classNames.join(' ').trim(),
+    open: normalizeOpenValue(getNamedString(parsedArgs.named, 'open', '')),
+  };
+}
+
+function parseLegacyArgs(rawArgs) {
+  const delimiter = rawArgs.includes('::') ? '::' : ',';
+  const [style = '', title = ''] = rawArgs.split(delimiter).map((arg) => arg.trim());
+
+  return {
+    title,
+    className: style,
+    open: false,
+  };
+}
+
+async function postFolding(args, content) {
+  const rawArgs = args.join(' ').trim();
+  const parsed = parseNamedArgs(rawArgs) || parseLegacyArgs(rawArgs);
+
+  const renderedContent = await renderMarkdownTagSafe({
+    hexo,
+    content,
+    postContext: this,
+  });
+
+  const processedContent = renderedContent.replace(
+    /<(h[1-6])>/g,
+    (_, tag) => `<p class='${tag}'>`,
+  ).replace(
+    /<\/(h[1-6])>/g,
+    () => '</p>',
+  );
+
+  const customClassAttr = parsed.className ? ` ${parsed.className}` : '';
+  const openAttr = parsed.open ? ' open' : '';
+
+  return html`
+    <details class="relative my-4 border border-border-color bg-second-background-color rounded-md ${customClassAttr}"${openAttr} data-header-exclude>
+      <summary class="px-4 py-2 rounded-md shadow-[0_0_2px_0_var(--shadow-color-1)] cursor-pointer not-markdown"><i class="fa-solid fa-chevron-right"></i>${parsed.title} </summary>
+      <div class="content p-4 ">
+        ${processedContent}
+      </div>
+    </details>
+  `;
+}
+
+hexo.extend.tag.register('folding', postFolding, { ends: true, async: true });

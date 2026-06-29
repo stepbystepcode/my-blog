@@ -4,7 +4,7 @@
   <a title="zh-TW" href="README_zh-TW.md"><img src="https://img.shields.io/badge/-%E7%B9%81%E4%BD%93%E4%B8%AD%E6%96%87-545759?style=for-the-badge" alt="繁体中文"></a>
 </div>
 
-<a href="https://redefine.ohevan.com"><img align="center" src="https://user-images.githubusercontent.com/68590232/226141917-68124e8f-fde0-4edd-b86d-c62932ec369a.png"  alt="Redefine"></a>
+<a href="https://redefine.ohevan.com"><img align="center" src="https://github.com/EvanNotFound/hexo-theme-redefine/assets/68590232/f2ff10f6-a740-4120-ba04-1b2a518fb019"  alt="Redefine"></a>
 
 
 # hexo-theme-redefine
@@ -90,7 +90,6 @@ theme: redefine
 ```
 
 
-
 ## ⏫ 更新
 
 Theme Redefine 经常发布新版本，你可以通过如下命令更新 Theme Redefine。
@@ -104,9 +103,9 @@ $ npm install hexo-theme-redefine@latest
 通过 `git` 更新到最新的 `main` 分支：
 
 ```sh
-$ git clone https://github.com/EvanNotFound/hexo-theme-redefine.git themes/redefine
+$ cd themes/redefine
+$ git pull
 ```
-
 
 
 ## 📄 文档
@@ -131,9 +130,28 @@ $ git clone https://github.com/EvanNotFound/hexo-theme-redefine.git themes/redef
 
 所有赞助者名单：[赞助者名单](https://github.com/EvanNotFound/hexo-theme-redefine/blob/dev/DONATION.md)
 
-想要使用OpenAI GPT-4，但不想每月支付 20 美元吗？来看看我的 [GPT Plus Share](https://gpt.oknice.ca)，使用多达 100 个 ChatGPT Plus 账户！
+🎉 **ChatGPT Plus 会员，每月仅需 23.9 元！省下官网 20 美元/月**\
+👉 [立即体验 GPT Plus 共享站](https://www.gptplus.ca/home)
 
-![GPT Billboard](https://github.com/EvanNotFound/hexo-theme-redefine/assets/68590232/55346629-cd54-45a4-9b31-3f979750b0c0)
+- ✅ **官方正版账号池**，支持 GPT-5.2 / GPT-5.2 Pro 等最新模型，Sora 2 视频/图片生成
+- ✅ **国内直接访问**，无需梯子，即开即用
+- ✅ **免费试用一天**，满意再付款，零风险体验
+- ✅ 高级语音对话 + 超高对话上限，随便问不心疼
+- ✅ 运营两年老站，售后有保障，Evan 亲自维护
+
+[![gpt-billboard](https://github.com/user-attachments/assets/e4b142ad-b48f-4ea1-828e-57a743f54d90)](https://www.gptplus.ca/home)
+
+👨‍💻 **AI 编程助手，让效率翻倍！Arc Codex 一站式编程平台**\
+💰 注册即送 $5 美元额度，首月套餐仅 ¥15.9 起！\
+👉 [立即体验 Arc Codex](https://www.arccodex.com)
+
+
+- ✅ 支持 GPT-5.3-codex 等最新编程模型，代码生成更精准
+- ✅ 每日 \$40 美元额度自动重置，月总额高达 \$1200，随便用不封顶
+- ✅ 标准版首月仅 15.9 元，远低于官网价，同时使用优惠码 `REDEFINE`，续费享 **8折** 优惠！
+- ✅ Evan 运营保障，不满意包退，无后顾之忧
+
+[![arccodex-billboard](https://github.com/user-attachments/assets/6b1f49c9-9791-4466-8d1f-211b0c712633)](https://www.arccodex.com)
 
 ## 🌟 Star 记录
 

@@ -4,16 +4,15 @@
   <a title="zh-TW" href="README_zh-TW.md"><img src="https://img.shields.io/badge/-%E7%B9%81%E4%BD%93%E4%B8%AD%E6%96%87-545759?style=for-the-badge" alt="繁体中文"></a>
 </div>
 
-<a href="https://redefine.ohevan.com"><img align="center" src="https://user-images.githubusercontent.com/68590232/226141917-68124e8f-fde0-4edd-b86d-c62932ec369a.png"  alt="Redefine"></a>
+<a href="https://redefine.ohevan.com"><img align="center" src="https://github.com/EvanNotFound/hexo-theme-redefine/assets/68590232/f2ff10f6-a740-4120-ba04-1b2a518fb019"  alt="Redefine"></a>
 
 
 
 # hexo-theme-redefine
 
-"Redefine" hexo theme is a blend of **simplicity, speed, and purity**, yet it makes **no compromises** on functionality or design. Loaded with widely utilized features and polished web design, it seamlessly marries practicality with aesthetics.
+Hexo-theme-Redefine reimagines simplicity, speed, and purity, without sacrificing functionality or design. Its sleek, modern aesthetic is packed with useful features, blending style and practicality seamlessly.
 
-Drawing its core from [hexo-theme-keep](https://github.com/XPoet/hexo-theme-keep), this theme elevates the foundation by enhancing the style and integrating valuable writing modules and plugins. The theme encourages personalization, offering extensive customizability to mold various facets to your liking, making your blogging journey truly unique and user-friendly.
-
+Building on the solid foundation of hexo-theme-keep, "Redefine" elevates the style and incorporates valuable writing tools and plugins. It offers extensive customization options, allowing you to tailor every detail to your preferences. With Redefine, your blogging experience becomes unique and effortless, showcasing your personal style and needs.
 
 <p align="center">
     <a href="https://www.npmjs.com/package/hexo-theme-redefine">
@@ -100,10 +99,11 @@ To update hexo-theme-redefine, you can run the same **npm** command
 $ npm install hexo-theme-redefine@latest
 ```
 
-Another method is by **git clone**
+If you installed the theme by **git clone**, you can update the theme by running the following command
 
 ```sh
-$ git clone https://github.com/EvanNotFound/hexo-theme-redefine.git themes/redefine
+$ cd themes/redefine
+$ git pull
 ```
 
 
@@ -134,10 +134,29 @@ If you like this theme, please give a star. You can also support me by [donating
 
 This is the list of all the people who have donated to me: [Donation List](https://github.com/EvanNotFound/hexo-theme-redefine/blob/dev/DONATION.md)
 
+🎉 **ChatGPT Plus 会员，每月仅需 23.9 元！省下官网 20 美元/月**\
+👉 [立即体验 GPT Plus 共享站](https://www.gptplus.ca/home)
 
-Want to use OpenAI GPT-4 but don't want to pay $20 per month? Check out [GPT Plus Share](https://gpt.oknice.ca)! You can use up to 100 ChatGPT Plus Accounts!
+- ✅ **官方正版账号池**，支持 GPT-5.2 / GPT-5.2 Pro 等最新模型，Sora 2 视频/图片生成
+- ✅ **国内直接访问**，无需梯子，即开即用
+- ✅ **免费试用一天**，满意再付款，零风险体验
+- ✅ 高级语音对话 + 超高对话上限，随便问不心疼
+- ✅ 运营两年老站，售后有保障，Evan 亲自维护
 
-![GPT Billboard](https://github.com/EvanNotFound/hexo-theme-redefine/assets/68590232/55346629-cd54-45a4-9b31-3f979750b0c0)
+[![gpt-billboard](https://github.com/user-attachments/assets/e4b142ad-b48f-4ea1-828e-57a743f54d90)](https://www.gptplus.ca/home)
+
+👨‍💻 **AI 编程助手，让效率翻倍！Arc Codex 一站式编程平台**\
+💰 注册即送 $5 美元额度，首月套餐仅 ¥15.9 起！\
+👉 [立即体验 Arc Codex](https://www.arccodex.com)
+
+
+- ✅ 支持 GPT-5.3-codex 等最新编程模型，代码生成更精准
+- ✅ 每日 \$40 美元额度自动重置，月总额高达 \$1200，随便用不封顶
+- ✅ 标准版首月仅 15.9 元，远低于官网价，同时使用优惠码 `REDEFINE`，续费享 **8折** 优惠！
+- ✅ Evan 运营保障，不满意包退，无后顾之忧
+
+[![arccodex-billboard](https://github.com/user-attachments/assets/6b1f49c9-9791-4466-8d1f-211b0c712633)](https://www.arccodex.com)
+
 
 ## 🌟 Star History
 
